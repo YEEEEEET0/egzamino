@@ -1,0 +1,9 @@
+.dark-on-hover:hover{
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.opposite{
+    display: flex;
+    justify-content: space-between;
+}
