@@ -26,7 +26,7 @@ const UserRegister = () => {
       const data = await response.json();
       alert(data.message || data.errorMessage)
       if(data.message){
-        navigate('/login')
+        navigate('/')
       }
     } catch (error) {
         console.log(error);
