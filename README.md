@@ -1,7 +1,7 @@
 how to install npm packages: 
 
-1. cd .\frontend ; npm install ; cd ..
-2. cd .\backend ; npm install ; cd ..
+1. cd ./frontend ; npm install ; cd ..
+2. cd ./backend ; npm install ; cd ..
 
 how to launch: 
 
