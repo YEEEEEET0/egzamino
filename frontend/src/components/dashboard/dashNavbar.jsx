@@ -31,7 +31,6 @@ const DashNavbar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto spread">
                             <Nav.Link href="/admin/patiekalai" className='fs-5'>patiekalai</Nav.Link>
-                            <Nav.Link href="/admin/meistrai" className='fs-5'>Meistrai</Nav.Link>
                         </Nav>
                         <button type="button" className="btn btn-danger max-80 font-medium" onClick={handleLogout}>Atsijungti</button>
                     </Navbar.Collapse>

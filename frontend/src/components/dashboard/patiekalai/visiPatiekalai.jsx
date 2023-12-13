@@ -30,11 +30,11 @@ const VisiPatiekalai = () => {
     try {
       const response = await fetch(`http://localhost:3000/dishes/${id}`, {
         method: 'DELETE',
-        credentials: "include"
+        credentials: 'include',
       });
 
       if (response.ok) {
-        console.log('Dish deleted successfully');
+        setDishes(dishes.filter((dish) => dish._id !== id));
       } else if (response.status === 404) {
         setError('Dish not found');
       } else {
@@ -64,7 +64,7 @@ const VisiPatiekalai = () => {
 
   const closeModal = () => {
     fetchUpdatedDish(selectedDish._id);
-    setShowModal(false); 
+    setShowModal(false);
   };
 
   useEffect(() => {

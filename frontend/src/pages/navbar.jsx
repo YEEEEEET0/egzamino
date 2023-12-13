@@ -82,6 +82,10 @@ const NavbarComponent = ({ loggedIn, handleLogin }) => {
                                 Prisijunk
                             </button>
                         )}
+
+                        <button type="button" className="btn btn-info max-80 font-medium mx-2" onClick={() => { navigate('/register') }}>
+                            Registracija
+                        </button>
                     </div>
                 </div>
             </nav>

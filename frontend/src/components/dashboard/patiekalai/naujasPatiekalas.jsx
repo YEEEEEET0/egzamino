@@ -32,13 +32,17 @@ const NaujasPatiekalas = () => {
                 credentials: "include"
             });
 
+            if (!response.ok) {
+                throw new Error('Image upload failed');
+            }
+
             const data = await response.json();
             const { name } = data;
 
             const dishData = {
                 name: formData.name,
                 price: formData.price,
-                thumbnail: `/public/images/${name}.png`, 
+                thumbnail: `/public/images/${name}.png`,
                 description: formData.description
             };
 
@@ -51,13 +55,17 @@ const NaujasPatiekalas = () => {
                 credentials: "include"
             });
 
-            // Handle dishResponse as needed
+            if (!dishResponse.ok) {
+                throw new Error('Failed to add a new dish');
+            }
+
+            window.history.back();
 
         } catch (error) {
             console.error('Error:', error);
+            setError(error.message);
         }
     };
-
     return (
         <div>
             <DashNavbar />

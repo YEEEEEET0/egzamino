@@ -87,7 +87,8 @@ exports.incrementRating = async (req, res) => {
             order.usersRated = [];
         }
 
-        const userIndex = order.usersRated.indexOf(decoded.user);
+        const userIndex = order.usersRated.findIndex(user => user === decoded.user);
+
         if (userIndex === -1) {
             order.rating = (order.rating || 0) + 1;
             order.usersRated.push(decoded.user);

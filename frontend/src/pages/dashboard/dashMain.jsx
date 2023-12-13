@@ -13,8 +13,6 @@ const dashMain = () => {
     return (
         <div>
             <DashNavbar />
-            <Link href="/admin/servisai" className='fs-5 mx-2'>Servisai</Link>
-            <Link href="/admin/meistrai" className='fs-5 mx-2'>Meistrai</Link>
         </div>
     );
 };
